@@ -52,7 +52,6 @@ public class StudentController {
         model.addAttribute("gender", gender);
         return "student/create";
     }
-
     @PostMapping("/create")
     public String newStudent(@ModelAttribute("student") Student student,
                              BindingResult bindingResult,
@@ -80,6 +79,4 @@ public class StudentController {
         model.addAttribute("nameStudent", nameStudent);
         return "student/list";
     }
-
-
 }
