@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 //Làm thế nào để tạo khóa phức hợp trong JPA
 @Entity(name = "student")
 //@Table(name = "student")
-public class Student {
+public class Student extends Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,6 +18,10 @@ public class Student {
     private String name;
     private String address;
     private Float score;
+
+    @ManyToOne
+    @JoinColumn(name = "classroom_id")
+    private Classroom classroom;
 
     public Student() {
     }
@@ -66,4 +70,14 @@ public class Student {
     public void setScore(Float score) {
         this.score = score;
     }
+
+    public Classroom getClassroom() {
+        return classroom;
+    }
+
+    public void setClassroom(Classroom classroom) {
+        this.classroom = classroom;
+    }
+
+
 }
