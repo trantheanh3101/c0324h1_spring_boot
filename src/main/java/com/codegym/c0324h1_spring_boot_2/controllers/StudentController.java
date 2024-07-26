@@ -56,7 +56,7 @@ public class StudentController {
                                      @RequestParam(value = "nameStudent", defaultValue = "") String nameStudent,
                                      @RequestParam(value = "page", defaultValue = "0")int page) {
         Sort sort = Sort.by("name").descending();
-        Page<Student> students = studentService.findAllByName(nameStudent, PageRequest.of(page, 20, sort));
+        Page<Student> students = studentService.findAllByName(nameStudent, PageRequest.of(page, 2, sort));
         model.addAttribute("students", students);
         model.addAttribute("nameStudent", nameStudent);
         return "student/list";

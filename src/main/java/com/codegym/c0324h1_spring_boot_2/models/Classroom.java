@@ -2,8 +2,6 @@ package com.codegym.c0324h1_spring_boot_2.models;
 
 import jakarta.persistence.*;
 
-import java.util.Set;
-
 @Entity(name = "classroom")
 public class Classroom {
 
