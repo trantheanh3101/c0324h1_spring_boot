@@ -21,5 +21,4 @@ public class StudentAspect {
             logger.info("Người dùng đã vào chức năng "+ joinPoint.getSignature().getName()
             + " vào lúc "+ LocalDateTime.now());
     }
-    
 }

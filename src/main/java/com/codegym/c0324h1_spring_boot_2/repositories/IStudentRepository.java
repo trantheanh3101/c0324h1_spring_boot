@@ -1,11 +1,9 @@
 package com.codegym.c0324h1_spring_boot_2.repositories;
 
 import com.codegym.c0324h1_spring_boot_2.models.Student;
-import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
