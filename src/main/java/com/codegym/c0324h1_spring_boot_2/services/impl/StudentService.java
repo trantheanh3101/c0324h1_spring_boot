@@ -35,4 +35,9 @@ public class StudentService implements IStudentService {
     public Student findById(Long id) {
         return studentRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public void deleteById(Long id) {
+        studentRepository.deleteById(id);
+    }
 }
